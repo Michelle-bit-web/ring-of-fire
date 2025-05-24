@@ -1,1 +1,10 @@
-<p>game works!</p>
+<div class="play-ground">
+    <div class="card-stack">
+        @for(num of [1,2,3,4,5]; let i = $index; track num){
+            <img 
+            [style.right.px]="i*5"
+            src="img/cards/card_cover.png" alt="cards">
+        }
+        
+    </div>
+</div>
