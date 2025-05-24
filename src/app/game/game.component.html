@@ -1,10 +1,18 @@
 <div class="play-ground">
     <div class="card-stack">
-        @for(num of [1,2,3,4,5]; let i = $index; track num){
+        @for(num of [1,2,3,4]; let i = $index; track num){
             <img 
             [style.right.px]="i*5"
             src="img/cards/card_cover.png" alt="cards">
-        }
-        
+        };
+    </div>
+     <div class="card-stack">
+        <img 
+        (click)="takeCard()" 
+        [ngClass]="{'pick-card': pickCardAnimation}" 
+        class="top-card" 
+        style="right: 25px" 
+        src="img/cards/card_cover.png" 
+        alt="cards">
     </div>
 </div>
