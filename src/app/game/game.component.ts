@@ -13,8 +13,10 @@ import { Game } from '../../models/game';
 })
 
 export class GameComponent {
+  arrNumb: number[] = [1,2,3,4];
   pickCardAnimation = false;
-  game?: Game;
+  game!: Game;
+  currentCard: string = '';
 
   ngOnInit(): void{
     this.newGame();
@@ -26,7 +28,14 @@ export class GameComponent {
   }
 
   takeCard(){
+    if(!this.pickCardAnimation){
+      this.currentCard = this.game.stack.pop() ?? '';
     this.pickCardAnimation = true;
-    console.log('take card', this.pickCardAnimation)
+
+    // setTimeout(() => {
+    //   this.pickCardAnimation = false;
+    // }, 1500)
+
   }
+    }
 }
