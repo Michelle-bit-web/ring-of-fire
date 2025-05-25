@@ -7,7 +7,9 @@
     <div class="card-stack">
         
         <img (click)="takeCard()"  style="right: 25px" src="img/cards/card_cover.png" alt="cards">
+        @for(card of game.playedCards; let i = $index; track card){
+            <img src="/img/cards/{{card}}.png" alt="played card" class="played-card">
+        };
         <img (click)="takeCard()" *ngIf="pickCardAnimation" class="pick-card" style="right: 25px" src="img/cards/{{ currentCard }}.png" alt="cards">
-    
     </div>
 </div>
