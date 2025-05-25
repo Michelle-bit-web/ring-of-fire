@@ -4,6 +4,9 @@
   padding: min(1rem, 5%);
   gap: 3%;
   background-color: rgb(37, 37, 37);
+  background: linear-gradient(to bottom right, rgb(93, 93, 93),  rgb(37, 37, 37));
+  background-size: 200% 200%;
+  animation: moveGradient 4s ease infinite;
   border-radius: (10px 0 0 10px );
   > p {
     font-size: 2rem;
@@ -15,5 +18,17 @@
     object-fit: cover;
     border-radius: 50%;
     border: 1px solid #fca97b;
+  }
+}
+
+@keyframes moveGradient {
+  0% {
+    background-position: left top;
+  }
+  50% {
+    background-position: right bottom;
+  }
+  100% {
+    background-position: left top;
   }
 }

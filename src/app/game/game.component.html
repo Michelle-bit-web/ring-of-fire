@@ -17,3 +17,6 @@
         <img (click)="takeCard()" *ngIf="pickCardAnimation" class="pick-card" style="right: 25px" src="img/cards/{{ currentCard }}.png" alt="cards">
     </div>
 </div>
+<button (click)="openDialog()" class="button-add" mat-fab aria-label="Example icon button with a delete icon">
+    <mat-icon>add</mat-icon>
+    </button>
