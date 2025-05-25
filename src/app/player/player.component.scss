@@ -1,0 +1,19 @@
+.player {
+  display: flex;
+  align-items: center;
+  padding: min(1rem, 5%);
+  gap: 3%;
+  background-color: rgb(37, 37, 37);
+  border-radius: (10px 0 0 10px );
+  > p {
+    font-size: 2rem;
+    color: #fca97b;
+  }
+  > img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid #fca97b;
+  }
+}
