@@ -50,6 +50,16 @@
 
 .button-add {
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: 32px;
+  right: 16px;
+  background: #a06c4e;
+  border: 1px solid #f2e0c0;
+  color: #f2e0c0;
+}
+
+.pinned-to-bottom {
+  position: absolute;
+  bottom: 32px;
+  left: 100px;
+  right: 100px;
 }
