@@ -29,5 +29,16 @@ export class GameInfoComponent {
 
   title: string = '';
   description: string = '';
-  @Input() card?: string;
+  @Input() card!: string;
+
+  ngOnInit(): void {
+  }
+
+  ngOnChanges(): void {
+    if(this.card){
+     let cardNumber = +this.card.split('_')[1];
+     this.title = this.cardAction[cardNumber-1].title;
+     this.description = this.cardAction[cardNumber-1].description;
+    }
+  };
 }
