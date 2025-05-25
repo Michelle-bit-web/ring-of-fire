@@ -5,6 +5,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-dialog-add-player',
@@ -15,7 +16,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     FormsModule,
     CommonModule,
     MatDialogModule,
-    FormsModule
+    FormsModule,
   ],
   templateUrl: './dialog-add-player.component.html',
   styleUrls: ['./dialog-add-player.component.scss']
@@ -23,7 +24,9 @@ import { MatDialogModule } from '@angular/material/dialog';
 export class DialogAddPlayerComponent {
   name: string = '';
 
+  constructor(public dialog:  MatDialogRef<DialogAddPlayerComponent>){}
+
   onNoClick(){
-    console.log('onNoclick() started')
+   this.dialog.close();
   }
 }

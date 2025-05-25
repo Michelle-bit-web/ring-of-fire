@@ -27,7 +27,7 @@ export class GameInfoComponent {
     { title: 'Rule', description: 'Make a rule. Everyone needs to drink when he breaks the rule.' },
   ];
 
-  title: string = '';
+  title: string = 'Please pick a card';
   description: string = '';
   @Input() card!: string;
 
