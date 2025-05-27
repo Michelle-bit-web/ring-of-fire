@@ -5,16 +5,16 @@
 <div class="play-ground">
     <div class="card-stack">
         @for(num of arrNumb; let i = $index; track num){
-            <img [style.right.px]="i*5" src="/assets/img/cards/card_cover.png" alt="cards">
+            <img [style.right.px]="i*5" src="assets/img/cards/card_cover.png" alt="cards">
         };
     </div>
     <div class="card-stack">
         
-        <img (click)="takeCard()"  style="right: 25px" src="/assets/img/cards/card_cover.png" alt="cards">
+        <img (click)="takeCard()"  style="right: 25px" src="assets/img/cards/card_cover.png" alt="cards">
         @for(card of game.playedCards; let i = $index; track card){
-            <img src="/assets/img/cards/{{card}}.png" alt="played card" class="played-card">
+            <img src="assets/img/cards/{{card}}.png" alt="played card" class="played-card">
         };
-        <img (click)="takeCard()" *ngIf="pickCardAnimation" class="pick-card" style="right: 25px" src="/assets/img/cards/{{ currentCard }}.png" alt="cards">
+        <img (click)="takeCard()" *ngIf="pickCardAnimation" class="pick-card" style="right: 25px" src="assets/img/cards/{{ currentCard }}.png" alt="cards">
     </div>
 </div>
 <button (click)="openDialog()" class="button-add" mat-fab aria-label="Example icon button with a delete icon">
